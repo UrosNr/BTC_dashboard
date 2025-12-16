@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BTC Dashboard</title>
+    <style>
+        /* 1. Remove default browser margins so the content touches the edges */
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            /* Ensure body takes full height */
+            overflow: hidden;
+            /* Force disable main scrollbar */
+            background-color: #1a1a1a;
+        }
+
+        /* 2. Create a Grid that fills the Viewport Height (100vh) */
+        .dashboard-grid {
+            display: grid;
+            /* Create 2 equal columns */
+            grid-template-columns: 1fr 1fr;
+            /* Create 2 equal rows */
+            grid-template-rows: 1fr 1fr;
+            /* Force the grid to be exactly the height of the screen */
+            height: 100vh;
+            width: 100vw;
+            /* Add a tiny gap between frames */
+            gap: 4px;
+            /* Ensure padding doesn't add to the width/height causing scroll */
+            box-sizing: border-box;
+            padding: 4px;
+        }
+
+        .dashboard-item {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .dashboard-item iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        a {
+            border: 2px solid #0ed32f;
+
+        }
+
+        a {
+            background: #222;
+            font-size: 16px;
+        }
+
+        a:hover {
+            background: rgb(6, 63, 16) !important;
+            font-size: 18px;
+            border: 2px solid #222;
+        }
+
+        /* made by unarancic*/
+    </style>
+</head>
+
+<body>
+
+    <div class="dashboard-grid">
+        <div class="dashboard-item">
+            <iframe
+                src="https://foundryusapool.com/viewer/dashboard?subaccount=boden&coin=BTC&api_key=f393c6c3-a18e-4c9e-bdee-66c1b43b1d4e"></iframe>
+        </div>
+
+        <div class="dashboard-item">
+            <iframe
+                src="https://foundryusapool.com/viewer/dashboard?subaccount=diamond&coin=BTC&api_key=b5b0bd3b-98bd-4f3f-9c1e-567bf7212833"></iframe>
+        </div>
+
+        <div class="dashboard-item">
+            <iframe
+                src="https://foundryusapool.com/viewer/dashboard?subaccount=notviken&coin=BTC&api_key=bd7d3404-cffc-4333-b77e-ed4de42fcdb0"></iframe>
+        </div>
+
+        <div class="dashboard-item" style="display: flex;">
+            <a href="https://hc.blockbasemining.com/" target="_blank"
+                style="display:flex; align-items:center; justify-content:center; width:50%; height:100%; text-decoration:none; background:#222; color:white; font-family:sans-serif; font-size:16px;">
+                Open Mining Dashboard ⧉
+            </a>
+            <a href="https://onzero.cloudflareaccess.com/#/NoAuth" target="_blank"
+                style="display:flex; align-items:center; justify-content:center; width:50%; height:100%; text-decoration:none; background:#222; color:white; font-family:sans-serif; font-size:16px;">
+                Open Grafana ⧉
+            </a>
+        </div>
+    </div>
+
+</body>
+
+</html>
